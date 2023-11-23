@@ -21,11 +21,11 @@ public class B40 {
             do {
                 System.out.println("Введите X начальной позиции");
                 positionX1 = Integer.parseInt(scanner.nextLine());
-            } while (positionX1 < 1 & positionX1 > 8);
+            } while (positionX1 < 1 && positionX1 > 8);
             do {
                 System.out.println("Введите Y начальной позиции");
                 positionY1 = Integer.parseInt(scanner.nextLine());
-            } while (positionY1 < 1 & positionY1 > 8);
+            } while (positionY1 < 1 && positionY1 > 8);
 
             //Помечаем фигуру на доске
             for (int i = 0; i < 8; i++) {
@@ -40,11 +40,11 @@ public class B40 {
             do {
                 System.out.println("Введите X конечной позиции");
                 positionX2 = Integer.parseInt(scanner.nextLine());
-            } while (positionX2 < 1 & positionX2 > 8);
+            } while (positionX2 < 1 && positionX2 > 8);
             do {
                 System.out.println("Введите Y конечной позиции");
                 positionY2 = Integer.parseInt(scanner.nextLine());
-            } while (positionY2 < 1 & positionY2 > 8);
+            } while (positionY2 < 1 && positionY2 > 8);
 
 
             //Помечаем фигуру на доске
@@ -58,7 +58,7 @@ public class B40 {
 
             //Конь 1/2 2/1
             //Проверяем корректность хода
-            turn = Math.abs(positionX2-positionX1) == 2 & Math.abs(positionY2-positionY1) == 1 || Math.abs(positionX2-positionX1) == 1 & Math.abs(positionY2-positionY1) == 2;
+            turn = Math.abs(positionX2-positionX1) == 2 && Math.abs(positionY2-positionY1) == 1 || Math.abs(positionX2-positionX1) == 1 && Math.abs(positionY2-positionY1) == 2;
             if (turn) {
                 System.out.println("Ход корректный");
             } else {
@@ -68,7 +68,7 @@ public class B40 {
             //Предлагаем переиграть
             System.out.println("Продолжить? (y,Y/n,N)");
             String doWeQuit = scanner.nextLine();
-            while (!doWeQuit.equals("n")  & !doWeQuit.equals("N") & !doWeQuit.equals("y") & !doWeQuit.equals("Y")) {
+            while (!doWeQuit.equals("n")  && !doWeQuit.equals("N") && !doWeQuit.equals("y") && !doWeQuit.equals("Y")) {
                 System.out.println("Неверная команда\nВведите 'y' или 'Y', если хотите продолжить игру\nВведите 'n' или 'N', если хотите выйти");
                 doWeQuit = scanner.nextLine();
             }
